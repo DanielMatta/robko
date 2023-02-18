@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4543" height="2207" viewBox="0 0 4543 2207">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-width: 25px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #f26c4f;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2283" y1="1309" x2="2283" y2="344" gradientUnits="userSpaceOnUse">
+      <stop offset="-0.82"/>
+      <stop offset="1.82" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path id="obrys" class="cls-1" d="M106,162V138H830V330H3735V142h714V2054H3728V1896H840v155H96Z"/>
+  <path id="ucebna_36" class="cls-2" d="M106,140V969H827V151Z"/>
+  <path id="ucebna_37" class="cls-2" d="M106.5,985.309V2050.93h721V999.449Z"/>
+  <path id="ucebna_38a" class="cls-2" d="M824.512,1296.68v589.84H1378.49V1304.51Z"/>
+  <path id="ucebna_38b" class="cls-2" d="M1386.32,1296.68v589.81h678.36V1304.5Z"/>
+  <path id="ucebna_39" class="cls-2" d="M2069.56,1296.65v589.84h789.88V1304.47Z"/>
+  <path id="ucebna_40" class="cls-2" d="M2863.5,1296.62v589.87h853V1304.44Z"/>
+  <path id="ucebna_41a" class="cls-2" d="M3730.38,1066.68v966.81h708.24V1079.51Z"/>
+  <path id="ucebna_41b" class="cls-2" d="M3730.5,508.051V1043.08h708V515.15Z"/>
+  <path id="kabinet_42pok" class="cls-2" d="M3730.5,146.738V517.351h708v-365.7Z"/>
+  <path id="kabinet_42" class="cls-2" d="M3438.83,350.219v536.69h273.34V357.34Z"/>
+  <path id="WC_ucitelia" class="cls-2" d="M3075.39,349.569v525.2h205.22V356.538Z"/>
+  <path id="Vytah" class="cls-2" d="M3286.73,349.952V875.481h143.54V356.925Z"/>
+  <path id="WC_ucitelia2" class="cls-2" d="M2842.45,349.952V875.481h221.1V356.925Z"/>
+  <path id="random_miestnost35" class="cls-2" d="M831.339,349.892V875.51H1120.66V356.866Z"/>
+  <path id="ucebna_34" class="cls-2" d="M1127.06,349.8V875.508h209.88V356.776Z"/>
+  <path id="schody_left" class="cls-2" d="M1342.19,327.3h272.6V456.568H1465.1V754h142.39V886.7H1337.33Z"/>
+  <path id="schody_right" class="cls-2" d="M2837.81,886.7h-272.6V757.432H2714.9V460H2572.51V327.3h270.16Z"/>
+  <path id="chodba" class="cls-3" d="M1629,344h934V467h143V761H2567V879H3727v430H839V890h779V758H1475V463h139Z"/>
+</svg>

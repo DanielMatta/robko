@@ -1,14 +1,9 @@
 <script setup>
 import { ref, render } from 'vue';
-import inputClassVue from './components/input-class.vue';
 import { Vue3ToggleButton } from 'vue3-toggle-button'
 import '../node_modules/vue3-toggle-button/dist/style.css'
 import SimpleTypeahead from 'vue3-simple-typeahead';
 import 'vue3-simple-typeahead/dist/vue3-simple-typeahead.css';
-import { transform } from '@vue/compiler-core';
-// import { isSVGTag } from '@vue/shared';
-// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-// import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
 const isActive = ref(true);
 const navorient = ref(false);
 // const rotate =ref('');
