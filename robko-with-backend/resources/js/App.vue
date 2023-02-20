@@ -5,6 +5,7 @@ import { Vue3ToggleButton } from 'vue3-toggle-button'
 import '../../node_modules/vue3-toggle-button/dist/style.css'
 import SimpleTypeahead from 'vue3-simple-typeahead';
 import  MapSvg from '../maps/1.poschodie_podorys.svg'
+import poschodiePodorys1 from './poschodie-podorys-1.vue'
 // import 'vue3-simple-typeahead/dist/vue3-simple-typeahead.css';
 import '../../node_modules/vue3-simple-typeahead/dist/vue3-simple-typeahead.css';
 // import 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="  crossorigin="";
@@ -22,6 +23,7 @@ function handleClickNav(){
 };
 let curr_alt_pt = undefined;
 let curr_ctrl_pt = undefined;
+let svgElement = undefined;
 onMounted(()=>{
   // const target = document.querySelector(".target");
   // observer.observe(target);
@@ -44,8 +46,14 @@ onMounted(()=>{
     // attribution: 'ESO/INAF-VST/OmegaCAM'
     }
   );
-  let bounds = [[0,0], [200,300]];
-  let image = leaflet.imageOverlay(MapSvg, bounds).addTo(map);
+  let bounds = leaflet.latLngBounds([[0,0], [400,400]]);
+  // let image = leaflet.imageOverlay(MapSvg, bounds,{
+  //   interactive: true
+  // }).addTo(map);
+//   image.on('click', function(e) {
+//   console.log(e);
+// });
+
   leaflet.marker([51.5, -0.09]).addTo(map)
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     .openPopup();
@@ -56,7 +64,7 @@ onMounted(()=>{
 //     // addNodes(node);
 //     console.log(node[0], node[1]);
 // });
-for (let key in first_floor_nodes){
+for (let key in first_floor_nodes){ //rendering nodes
   let marker = leaflet.marker(first_floor_nodes[key]).addTo(map);
   marker.name = key; //num = meno node?
 
@@ -97,12 +105,26 @@ function deg2rad(deg) {
 }
 }
   map.fitBounds(bounds);
+  let svgElement = document.querySelector('#svg');
+  console.log(svgElement.children);
+
+// console.log(svgElement);
+  const svgOverlay = leaflet.svgOverlay(svgElement, bounds, {
+		interactive: true
+	}).addTo(map);
+
+svgOverlay.on('click',function(e){
+  console.log(e.originalEvent.path[0].id);  //e.originalEvent.path[0].id path ku idcku miestnosti
+})
+
+
   // let popup = leaflet.popup();
 // function addNodes(polyNodes){
 // let marker = leaflet.marker([polyNodes[0], polyNodes[1]]).addTo(map);
 // };
 
 });
+
 
 </script>
 
@@ -133,6 +155,7 @@ function deg2rad(deg) {
   <!-- <textarea name="textarea_nodes" id="textearea_nodes" cols="30" rows="10"></textarea> -->
   <div class="target"> {{nodestext}}</div>
   </main>
+  <poschodiePodorys1></poschodiePodorys1>
 </template>
 
 <style scoped lang="scss">

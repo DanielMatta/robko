@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
 use App\Http\Actions\GetSchoolClassesFromApi;
+use App\Http\Actions\GetSchoolClassroomsFromApi;
 use App\Models\SchoolClass;
+use App\Models\SchoolClassroom;
 
 class PostController extends Controller
 {
     public function store(){
-        dd(SchoolClass::get());
+        dd(SchoolClassroom::get());
 
         // dd(app(GetSchoolClassesFromApi::class)->handle());
 

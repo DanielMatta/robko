@@ -1,24 +1,6 @@
+<template>
 <svg id= "svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4645" height="2145" viewBox="0 0 4645 2145">
   <defs>
-    <style>
-      .cls-1 {
-        fill: #f26c4f;
-      }
-
-      .cls-1, .cls-2, .cls-3 {
-        stroke: #000;
-        stroke-width: 25px;
-        fill-rule: evenodd;
-      }
-
-      .cls-2 {
-        fill: none;
-      }
-
-      .cls-3 {
-        fill: url(#linear-gradient);
-      }
-    </style>
     <linearGradient id="linear-gradient" x1="2320.5" y1="1243" x2="2320.5" y2="293" gradientUnits="userSpaceOnUse">
       <stop offset="-2.085"/>
       <stop offset="3.085" stop-opacity="0"/>
@@ -46,3 +28,62 @@
   <path id="WC_ziaci" class="cls-1" d="M871.29,286.5h198.53v553H870.181Z"/>
   <path id="kabinet_22" class="cls-1" d="M1094.12,286.5h336.7v553H1092.24Z"/>
 </svg>
+
+</template>
+
+<script>
+  export default {
+    name: 'poschodiePodorys1',
+
+    props: {
+      width: {
+        type: String,
+        required: false
+      },
+
+      height: {
+        type: String,
+        required: false
+      },
+
+      size: {
+        type: String,
+        required: false
+      }
+    },
+
+    computed: {
+      widthAttr() {
+        if (this.height) return undefined;
+        if (this.size) return this.size;
+        return this.width || "4645px";
+      },
+
+      heightAttr() {
+        if (this.width) return undefined;
+        if (this.size) return this.size;
+        return this.height || "2145px";
+      }
+    }
+  }
+</script>
+
+<style>
+      .cls-1 {
+        fill: #f26c4f;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-width: 25px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
