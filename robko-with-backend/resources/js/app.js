@@ -10,6 +10,11 @@ library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 import App from './App.vue'
+import MessageComponent from './components/MessageComponent.vue'
+// import Vue from 'vue'
+// Vue.component('message-component', require('./components/MessageComponent.vue'))
 
 
 createApp(App).mount('#app')
+
+// createApp(MessageComponent).mount('#test')

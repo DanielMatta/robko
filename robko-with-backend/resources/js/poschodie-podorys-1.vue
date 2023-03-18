@@ -1,5 +1,5 @@
 <template>
-<svg id= "svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4645" height="2145" viewBox="0 0 4645 2145">
+<svg id= "poschodie1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4645" height="2145" viewBox="0 0 4645 2145">
   <defs>
     <linearGradient id="linear-gradient" x1="2320.5" y1="1243" x2="2320.5" y2="293" gradientUnits="userSpaceOnUse">
       <stop offset="-2.085"/>
@@ -12,8 +12,8 @@
   <path id="ucebna_26a_copy" data-name="ucebna_26a copy" class="cls-1" d="M1309.16,1252.02h439.17v578.96H1306.71Z"/>
   <path id="ucebna_26b" class="cls-1" d="M1307.16,1252.02h439.17v578.96H1304.71Z"/>
   <path id="ucebna_27" class="cls-1" d="M1766.96,1252.49h906.22v579.02H1761.9Z"/>
-  <path id="ucebna_28a" class="cls-1" d="M2671.65,1252.49h545.82v579.02H2668.6Z"/>
-  <path id="ucebna_28b" class="cls-1" d="M3231.65,1252.49h545.82v579.02H3228.6Z"/>
+  <path id="ucebna_28A" class="cls-1" d="M2671.65,1252.49h545.82v579.02H2668.6Z"/>
+  <path id="ucebna_28B" class="cls-1" d="M3231.65,1252.49h545.82v579.02H3228.6Z"/>
   <path id="ucebna_29" class="cls-1" d="M3781.05,1071.97h700.9v926.06H3777.14Z"/>
   <path id="ucebna_30" class="cls-1" d="M3781.46,338.767h701.05V1062.23H3777.55Z"/>
   <path id="kabinet_31pok" class="cls-1" d="M3781.49,113.037h701.02V346.963H3777.58Z"/>
@@ -68,7 +68,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
       .cls-1 {
         fill: #f26c4f;
       }
@@ -86,4 +86,26 @@
       .cls-3 {
         fill: url(#linear-gradient);
       }
+      .color{
+        fill: red;
+      }
+      @keyframes blink1-anim {
+  0% { fill: #800; }
+  33% { fill: #f00; }
+  66% { fill: #800; }
+  100% { fill: #800; }
+}
+@keyframes blink2-anim {
+  0% { fill: rgb(16, 136, 0); }
+  33% { fill: rgb(47, 255, 0); }
+  66% { fill: rgb(0, 136, 2); }
+  100% { fill: rgb(0, 136, 48); }
+}
+.blink1 {
+  animation: blink1-anim 1.5s infinite;
+}
+.blink2 {
+  animation: blink2-anim 1.5s infinite;
+}
+
     </style>
