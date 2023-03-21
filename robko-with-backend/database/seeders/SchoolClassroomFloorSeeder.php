@@ -33,5 +33,6 @@ class SchoolClassroomFloorSeeder extends Seeder
         SchoolClassroom::where('id', '<', 28)->where('id', '>', 19)->update(['floor' => 3]);
         SchoolClassroom::where('id', '<', 34)->where('id', '>', 27)->update(['floor' => 4]);
         SchoolClassroom::where('id', '<', 56)->where('id', '>', 33)->update(['floor' => -1]);
+        sleep(30);
     }
 }

@@ -3,7 +3,7 @@ namespace App\Http\Actions;
 // use Illuminate\Http\Request;
 // use App\Models\Post;
 use Illuminate\Support\Facades\Http;
-class GetSchoolClassesFromApi{
+class GetCardsFromApi{
 
 
     public function handle(){
@@ -15,15 +15,17 @@ class GetSchoolClassesFromApi{
         $json_format_data = json_encode($xml_object);
         $data =  json_decode($json_format_data);
         $collection = collect($data);
-        $class = collect($collection->get("classes"));
-        $classes = collect($class->get("class"));
+        $class = collect($collection->get("cards"));
+        $classes = collect($class->get("card"));
         $class_name = $classes->pluck("@attributes.name");
         // $class_id = $classes->pluck("@attributes.id");
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
         return $classes->map(function($class) {
-            $formattedClass['class_name'] = $class->{"@attributes"}->name;
-            $formattedClass['api_id'] = $class->{"@attributes"}->id;
-            $formattedClass['api_id_teacher'] = $class->{"@attributes"}->teacherid;
+            $formattedClass['lesson_id'] = $class->{"@attributes"}->lessonid;
+            $formattedClass['classroom_id'] = $class->{"@attributes"}->classroomids;
+            $formattedClass['period'] = $class->{"@attributes"}->period;
+            $formattedClass['weeks'] = $class->{"@attributes"}->weeks;
+            $formattedClass['days'] = $class->{"@attributes"}->days;
             return $formattedClass;
         });
     }

@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             SchoolClassroomSeeder::class,
             SchoolSubjectSeeder::class,
             SchoolPeriodSeeder::class,
-            SchoolClassroomFloorSeeder::class
+            SchoolCardSeeder::class,
+            SchoolClassroomFloorSeeder::class,
+            SchoolLessonSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 
@@ -30,3 +32,4 @@ class DatabaseSeeder extends Seeder
         // ]);
     }
 }
+

@@ -189,12 +189,12 @@ onMounted(()=>{
 
 
   let bounds = leaflet.latLngBounds([[0,0], [400,400]]);
+  let svgPoschodieSuterenElement = document.querySelector('#suteren');
   let svgPoschodie0Element = document.querySelector('#poschodie0');
   let svgPoschodie1Element = document.querySelector('#poschodie1');
   let svgPoschodie2Element = document.querySelector('#poschodie2');
   let svgPoschodie3Element = document.querySelector('#poschodie3');
   let svgPoschodie4Element = document.querySelector('#poschodie4');
-  let svgPoschodieSuterenElement = document.querySelector('#suteren');
 
   let svgPoschodieSuteren = leaflet.svgOverlay(svgPoschodieSuterenElement, bounds, {
       interactive: true
@@ -218,16 +218,16 @@ onMounted(()=>{
 
 
   let overlays = {
-    '-1' : svgPoschodieSuteren,
-    '0' : svgPoschodie0,
-    '2' : svgPoschodie2,
-    '1' : svgPoschodie1,
-    '3' : svgPoschodie3,
-    '4' : svgPoschodie4
+      '4' : svgPoschodie4,
+      '3' : svgPoschodie3,
+      '2' : svgPoschodie2,
+      '1' : svgPoschodie1,
+      '0' : svgPoschodie0,
+      '-1' : svgPoschodieSuteren
   }
 
 
-  let overlaysGroup = leaflet.layerGroup(svgPoschodieSuteren,svgPoschodie0,svgPoschodie1,svgPoschodie2,svgPoschodie3,svgPoschodie4);
+//   let overlaysGroup = leaflet.layerGroup(svgPoschodieSuteren,svgPoschodie0,svgPoschodie1,svgPoschodie2,svgPoschodie3,svgPoschodie4);
 
   let map = leaflet.map('map', {
       crs: leaflet.CRS.Simple,
@@ -390,16 +390,16 @@ for (let overlay in overlays){
     <h1>EDU-NAV</h1>
     <h3>Your pocket navigation</h3>
   </header>
-  <nav>hamburger</nav>
+  <!-- <nav>hamburger</nav> -->
 
   <main>
    <div class="class">
     <SimpleTypeahead id="class"  :items="classnames" v-if="!isActive" placeholder="class" :minInputLength="1"></SimpleTypeahead>
     </div>
     <div class="manual" v-if="isActive">
-      <SimpleTypeahead id="start" v-model="startLoc" placeholder="cau" :items="shortnames" :minInputLength="1"> </SimpleTypeahead>
+      <SimpleTypeahead id="start" v-model="startLoc" placeholder="Start location" :items="shortnames" :minInputLength="1"> </SimpleTypeahead>
       <button @click="handleClickNav" :style="{transform: navorient ? 'rotate(180deg)': 'rotate(0deg)'}" ><i class="fa fa-long-arrow-right" aria-hidden="true" ></i></button>
-      <SimpleTypeahead :items="shortnames" id="end" v-model="endLoc" placeholder="cau2" :minInputLength="1"></SimpleTypeahead>
+      <SimpleTypeahead :items="shortnames" id="end" v-model="endLoc" placeholder="End location" :minInputLength="1"></SimpleTypeahead>
     </div>
     <div class="toggle-button-container">
       <p>class mode</p>
@@ -515,7 +515,7 @@ div#class_wrapper.simple-typeahead{
   }
 }
 #map{
-  height: 200px;
+  height: 400px;
   width: 100%;
   z-index: 190;
 

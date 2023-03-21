@@ -16,6 +16,8 @@ class GetClassroomsFromApi{
         $collection = collect($data);
         $class = collect($collection->get("classrooms"));
         $classes = collect($class->get("classroom"));
+        // $class = collect($collection->get("lessons"));
+        // $classes = collect($class->get("lesson"));
         $class_name = $classes->pluck("@attributes.name");
         // $class_id = $classes->pluck("@attributes.id");
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
@@ -23,6 +25,9 @@ class GetClassroomsFromApi{
             $formattedClass['classroom_name'] = $class->{"@attributes"}->name;
             $formattedClass['short_name'] = $class->{"@attributes"}->short;
             $formattedClass['api_id'] = $class->{"@attributes"}->id;
+            // $formattedClass['api_id'] = $class->{"@attributes"}->id;
+            // $formattedClass['class_id'] = $class->{"@attributes"}->classids;
+            // $formattedClass['subject_id'] = $class->{"@attributes"}->subjectid;
             return $formattedClass;
         });
     }

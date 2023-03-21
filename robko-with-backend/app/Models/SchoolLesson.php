@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class SchoolLesson extends Model
+{
+    use HasFactory;
+    protected $fillable =[
+        'api_id',
+        'class_id',
+        'subject_id'
+    ];
+}

@@ -3,7 +3,7 @@ namespace App\Http\Actions;
 // use Illuminate\Http\Request;
 // use App\Models\Post;
 use Illuminate\Support\Facades\Http;
-class GetSchoolClassesFromApi{
+class GetLessonsFromApi{
 
 
     public function handle(){
@@ -15,15 +15,15 @@ class GetSchoolClassesFromApi{
         $json_format_data = json_encode($xml_object);
         $data =  json_decode($json_format_data);
         $collection = collect($data);
-        $class = collect($collection->get("classes"));
-        $classes = collect($class->get("class"));
+        $class = collect($collection->get("lessons"));
+        $classes = collect($class->get("lesson"));
         $class_name = $classes->pluck("@attributes.name");
         // $class_id = $classes->pluck("@attributes.id");
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
         return $classes->map(function($class) {
-            $formattedClass['class_name'] = $class->{"@attributes"}->name;
             $formattedClass['api_id'] = $class->{"@attributes"}->id;
-            $formattedClass['api_id_teacher'] = $class->{"@attributes"}->teacherid;
+            $formattedClass['class_id'] = $class->{"@attributes"}->classids;
+            $formattedClass['subject_id'] = $class->{"@attributes"}->subjectid;
             return $formattedClass;
         });
     }
