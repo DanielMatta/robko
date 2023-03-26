@@ -25,16 +25,20 @@ class ClassroomController extends Controller
         // dd(SchoolClassroom::pluck('short_name'));
         return SchoolClassroom::pluck("name");
     }
+    public static function getFloor(Request $request, string $id){
+        // dd(SchoolClassroom::pluck("floor")->where("id", "=", $id));
+        return SchoolClassroom::where("short_name", $id)->get("floor");
+    }
     public static function test() {
         // return view('app',[
         //     'shortname' => SchoolClassroom::pluck("short_name")
         // ]);
         // dd(SchoolClassroom::pluck('short_name'));
-        $api_key = config("spsekeapi.api_key");
-        $base_url_api = config("spsekeapi.base_url_api");
-        $api_url ="{$base_url_api}?apikey={$api_key}&cmd=gettimetable&timetableid=98&format=asctt2012.xml";
-        $response = Http::get($api_url);
-        $xml_object = simplexml_load_string($response);
+        // $api_key = config("spsekeapi.api_key");
+        // $base_url_api = config("spsekeapi.base_url_api");
+        // $api_url ="{$base_url_api}?apikey={$api_key}&cmd=gettimetable&timetableid=98&format=asctt2012.xml";
+        // $response = Http::get($api_url);
+        // $xml_object = simplexml_load_string($response);
         // dd($response);
     }
     public static function getClassroomId() {

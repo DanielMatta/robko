@@ -8,9 +8,8 @@
   </defs>
   <path id="ucebna_24" class="cls-1" d="M152,109H868v976H148Z"/>
   <path id="ucebna_25" class="cls-1" d="M151.561,1096.55H867.5v901.9H147.561Z"/>
-  <path id="ucebna_26a" class="cls-1" d="M865.159,1252.02H1304.33v578.96H862.705Z"/>
-  <path id="ucebna_26a_copy" data-name="ucebna_26a copy" class="cls-1" d="M1309.16,1252.02h439.17v578.96H1306.71Z"/>
-  <path id="ucebna_26b" class="cls-1" d="M1307.16,1252.02h439.17v578.96H1304.71Z"/>
+  <path id="ucebna_26A" class="cls-1" d="M865.159,1252.02H1304.33v578.96H862.705Z"/>
+  <path id="ucebna_26B" class="cls-1" d="M1307.16,1252.02h439.17v578.96H1304.71Z"/>
   <path id="ucebna_27" class="cls-1" d="M1766.96,1252.49h906.22v579.02H1761.9Z"/>
   <path id="ucebna_28A" class="cls-1" d="M2671.65,1252.49h545.82v579.02H2668.6Z"/>
   <path id="ucebna_28B" class="cls-1" d="M3231.65,1252.49h545.82v579.02H3228.6Z"/>

@@ -12,7 +12,8 @@ class SchoolClassroom extends Model
         'classroom_name',
         "short_name",
         // "teaher_admin"
-        'api_id'
+        'api_id',
+        'floor'
         // 'api_id_teacher'
     ];
 }

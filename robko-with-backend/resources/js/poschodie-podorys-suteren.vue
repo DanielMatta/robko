@@ -11,8 +11,8 @@
   <path id="chodba_vpravo" class="cls-1" d="M3677,449H4723V334h153V473h491V676H4862v867h146v955H4855V2396H4750l1,206h114v201H4676v819h338v145H4517V2586h125V1543h64V673H3680Z"/>
   <path id="chodba_main" class="cls-2" d="M2411,3758V3323h175v341h678V3321h415v339h838V2967H2359v791h52Z"/>
   <path id="chodba_vlavo" class="cls-3" d="M3298,439V666H2225v874h125V3768H1906V3410h285V2587H1923V1537h122V664h-54V438Z"/>
-  <path id="satne_vpravo" class="cls-4" d="M3737,3323h716v301H3732Z"/>
-  <path id="satne_vlavo" class="cls-4" d="M2624.32,3323.5H3202.9v301H2620.28Z"/>
+  <path id="schody_right" class="cls-4" d="M3737,3323h716v301H3732Z"/>
+  <path id="schody_left" class="cls-4" d="M2624.32,3323.5H3202.9v301H2620.28Z"/>
   <path id="Vytah" class="cls-4" d="M2414,3330h174v351H2407Z"/>
   <path id="vchod" class="cls-4" d="M3266,3323h418v346H3264Z"/>
   <path id="ucebna_115" class="cls-4" d="M1217,443v575h475V675h308l-2-236Z"/>
@@ -21,7 +21,7 @@
   <path id="jedalen" class="cls-4" d="M1527.07,3771.5h736.35v1095H1521.64Z"/>
   <path id="ucebna_112" class="cls-4" d="M2069.18,99.694h817.74V423.306H2063.15Z"/>
   <path id="ucebna_124" class="cls-4" d="M1694.25,669.95H2053.5v335.1H1691.6Z"/>
-  <path id="miestnosti1" class="cls-4" d="M1732.4,1027.8h315.62v503.4H1730.07Z"/>
+  <path id="ucebna_132" class="cls-4" d="M1732.4,1027.8h315.62v503.4H1730.07Z"/>
   <path id="miestnosti4" class="cls-4" d="M1905.16,2586.92h278.79v682.16H1903.1Z"/>
   <path id="pani_obedarka" class="cls-4" d="M1905.6,3271.21h278.91v120.58H1903.54Z"/>
   <path id="wc_ziaci" class="cls-4" d="M1539.24,1523.66h386.44v147.68H1536.39Z"/>
@@ -41,11 +41,11 @@
   <path id="satna_1_copy" data-name="satna_1 copy" class="cls-4" d="M4678.97,2805.99h324.52v423.02H4676.57Z"/>
   <path id="wc_ucitelia" class="cls-4" d="M5005.97,2487.99h324.52v135.02H5003.57Z"/>
   <path id="wc_ziaci-2" data-name="wc_ziaci" class="cls-4" d="M5005.97,2348.99h324.52v135.02H5003.57Z"/>
-  <path id="ucebna_74a" class="cls-4" d="M5006,2036.41h324.49v309.18H5003.6Z"/>
-  <path id="ucebna_74b" class="cls-4" d="M5006,1708.41h324.49v309.18H5003.6Z"/>
+  <path id="ucebna_74A" class="cls-4" d="M5006,2036.41h324.49v309.18H5003.6Z"/>
+  <path id="ucebna_74B" class="cls-4" d="M5006,1708.41h324.49v309.18H5003.6Z"/>
   <path id="registratura" class="cls-4" d="M5006,1550.18h324.49v152.64H5003.6Z"/>
-  <path id="ucebna_95a" class="cls-4" d="M4863.61,679.49h513.71v327.02h-517.5Z"/>
-  <path id="ucebna_95b" class="cls-4" d="M5374.34,482.729h291.57V999.271H5372.19Z"/>
+  <path id="ucebna_95A" class="cls-4" d="M4863.61,679.49h513.71v327.02h-517.5Z"/>
+  <path id="ucebna_95B" class="cls-4" d="M5374.34,482.729h291.57V999.271H5372.19Z"/>
   <path id="ucebna_96" class="cls-4" d="M5284.06,96.148h377.75v377.7H5281.27Z"/>
   <path id="ucebna_100" class="cls-4" d="M4882.06,96.148h377.75v377.7H4879.27Z"/>
   <path id="ucebna_90" class="cls-4" d="M4282,95.508h442.36V443.491H4278.74Z"/>

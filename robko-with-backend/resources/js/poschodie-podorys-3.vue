@@ -9,8 +9,8 @@
   <path id="obrys" class="cls-1" d="M109,105V81H833V273H3738V85h714V1997H3731V1839H843v155H99Z"/>
   <path id="ucebna_47" class="cls-2" d="M110,94H828v910H107Z"/>
   <path id="ucebna_48" class="cls-2" d="M109.531,1017.45H827.5v979.1H106.531Z"/>
-  <path id="ucebna_48a" class="cls-2" d="M827.6,1246.58H1409.86v592.84h-584.7Z"/>
-  <path id="ucebna_49b" class="cls-2" d="M1412.08,1246.52h625.48v592.96H1409.47Z"/>
+  <path id="ucebna_48B" class="cls-2" d="M827.6,1246.58H1409.86v592.84h-584.7Z"/>
+  <path id="ucebna_49B" class="cls-2" d="M1412.08,1246.52h625.48v592.96H1409.47Z"/>
   <path id="ucebna_50" class="cls-2" d="M2049.08,1246.52h625.48v592.96H2046.47Z"/>
   <path id="ucebna_51" class="cls-2" d="M2674.23,1246.49H3714.21v593.02H2669.89Z"/>
   <path id="ucebna_52" class="cls-2" d="M3726.68,1024.06h716.7v952.88H3723.69Z"/>

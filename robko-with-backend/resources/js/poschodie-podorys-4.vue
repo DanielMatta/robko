@@ -2,8 +2,8 @@
 <svg id = "poschodie4" xmlns="http://www.w3.org/2000/svg" width="6443" height="3026" viewBox="0 0 6443 3026">
   <defs>
   </defs>
-  <path id="ucebna_64" class="cls-1" d="M5291,1407H6315V2895H5295Z"/>
-  <path id="ucebna_" data-name="ucebna?" class="cls-1" d="M5290.53,712.791H6314.5V1402.21H5294.53Z"/>
+  <path id="ucebna_64A" class="cls-1" d="M5291,1407H6315V2895H5295Z"/>
+  <path id="ucebna_64B" data-name="ucebna?" class="cls-1" d="M5290.53,712.791H6314.5V1402.21H5294.53Z"/>
   <path id="kabinet_pok" class="cls-1" d="M5290.56,161.174H6314.5V721.826H5294.56Z"/>
   <path id="kabinet" class="cls-1" d="M4884.93,453.215H5286.1v503.57H4886.5Z"/>
   <path id="Vytah" class="cls-1" d="M4725.7,441.506h150.61V945.494H4726.29Z"/>
