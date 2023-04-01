@@ -22,7 +22,7 @@ class GetSubjectsFromApi{
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
         return $classes->map(function($class) {
             $formattedClass['subject_name'] = $class->{"@attributes"}->name;
-            $formattedClass['api_id'] = $class->{"@attributes"}->id;
+            $formattedClass['school_subject_id'] = $class->{"@attributes"}->id;
             $formattedClass['short_name'] = $class->{"@attributes"}->short;
             return $formattedClass;
         });

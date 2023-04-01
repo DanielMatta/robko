@@ -24,7 +24,7 @@ class GetClassroomsFromApi{
         return $classes->map(function($class) {
             $formattedClass['classroom_name'] = $class->{"@attributes"}->name;
             $formattedClass['short_name'] = $class->{"@attributes"}->short;
-            $formattedClass['api_id'] = $class->{"@attributes"}->id;
+            $formattedClass['school_classroom_id'] = $class->{"@attributes"}->id;
             // $formattedClass['api_id'] = $class->{"@attributes"}->id;
             // $formattedClass['class_id'] = $class->{"@attributes"}->classids;
             // $formattedClass['subject_id'] = $class->{"@attributes"}->subjectid;

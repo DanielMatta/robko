@@ -4,15 +4,29 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class SchoolCard extends Model
 {
     use HasFactory;
     protected $fillable =[
-      'lesson_id',
-      'classroom_id',
+      'school_lesson_id',
+      'school_classroom_id',
       'period',
       'weeks',
       'days'
     ];
+    public function subjects()
+    {
+        return $this->belongsToMany(SchoolSubject::class, 'school_lessons', 'school_lesson_id', 'school_subject_id', 'school_lesson_id', 'school_subject_id');
+    }
+    public function classrooms()
+    {
+        return $this->belongsToMany(SchoolClassroom::class, 'school_cards', 'school_lesson_id', 'school_classroom_id', 'school_lesson_id', 'school_classroom_id');
+    }
+    // public function lessons()
+    // {
+    //     return $this->belongsToMany(SchoolLesson::class, 'school_cards', 'school_classroom_id', 'school_lesson_id', 'school_classroom_id', 'school_lesson_id');
+    // }
+
 }

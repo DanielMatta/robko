@@ -21,8 +21,8 @@ class GetCardsFromApi{
         // $class_id = $classes->pluck("@attributes.id");
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
         return $classes->map(function($class) {
-            $formattedClass['lesson_id'] = $class->{"@attributes"}->lessonid;
-            $formattedClass['classroom_id'] = $class->{"@attributes"}->classroomids;
+            $formattedClass['school_lesson_id'] = $class->{"@attributes"}->lessonid;
+            $formattedClass['school_classroom_id'] = $class->{"@attributes"}->classroomids;
             $formattedClass['period'] = $class->{"@attributes"}->period;
             $formattedClass['weeks'] = $class->{"@attributes"}->weeks;
             $formattedClass['days'] = $class->{"@attributes"}->days;

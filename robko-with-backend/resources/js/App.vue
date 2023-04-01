@@ -29,6 +29,8 @@ const activeMap = ref(1);
 const count = ref(0)
 const startLocFloor = ref([])
 const endLocFloor = ref([])
+const timetableStart = ref([])
+const timetableEnd = ref([])
 // let test = Array();
 // ref(fetch("http://robko-with-backend.test/get_floor/64b").then(res => res.json()).then(data => console.log(data)));
 
@@ -42,6 +44,27 @@ async function setEndLocFloor(name) {
   let finalRes = await res.json();
   endLocFloor.value = finalRes;
 }
+
+async function rozvrhInitStart(classroom){
+  let res = await fetch("http://robko-with-backend.test/test/" + classroom)
+  let finalRes = await res.json();
+//   console.log(finalRes);
+  timetableStart.value = finalRes
+
+}
+async function rozvrhInitEnd(classroom){
+  let res = await fetch("http://robko-with-backend.test/test/" + classroom)
+  let finalRes = await res.json();
+//   console.log(finalRes);
+  timetableEnd.value = finalRes
+
+}
+
+function onclicktest(){
+  console.log("start" +timetableStart.value[1] + " end: " + timetableEnd.value[1]);
+}
+// rozvrhInit('64b')
+// rozvrhInit('64b').then(console.log(timetable.value[0]))
 
 
 
@@ -114,6 +137,7 @@ let curr_ctrl_pt = undefined;
 let svgElement = undefined;
 let shortnames = document.querySelector("#test").getAttribute('data-shortnames')  //shortnames of classrooms
 let classnames = document.querySelector("#test").getAttribute('data-classnames')  //classnames
+
 
 shortnames = shortnames.replaceAll('"', "");
 shortnames = shortnames.replaceAll('[', "");
@@ -452,6 +476,8 @@ map.on('baselayerchange', function(){
 
 // })
 watch(startLoc, (startLoc)=>{              //horsi sposob cez watch ale reaktivny
+    rozvrhInitStart(startLoc);
+    // console.log(timetable.value);
     setStartLocFloor(startLoc).then(function(){
       setLayer(startLocFloor.value[0].floor)
     startLoc = "#ucebna_" + startLoc;
@@ -475,6 +501,7 @@ watch(startLoc, (startLoc)=>{              //horsi sposob cez watch ale reaktivn
 
 
 watch(endLoc, (endLoc)=>{
+  rozvrhInitEnd(endLoc)
     setEndLocFloor(endLoc).then(function(){
     console.log("end locfloor : " , endLocFloor.value);
     let endLocnew = "#ucebna_" + endLoc;
@@ -547,7 +574,10 @@ watch(endLoc, (endLoc)=>{
   <div id="map"></div>
   <!-- <textarea name="textarea_nodes" id="textearea_nodes" cols="30" rows="10"></textarea> -->
   <!-- <div class="target"> {{nodestext}}</div> -->
-
+  <!-- {{ timetable }} -->
+  <!-- <button @click="onclicktest">timetable</button> -->
+  <div class="timetablestart" v-for="(item, index) in timetableEnd" :key="index"> {{ index }} {{ item.join(',') }}</div>
+  <!-- <div class="timetableend" v-for="(item, index) in timetableEnd" :key="index"> {{ index }} {{ item.join(',') }}</div> -->
   </main>
 
   <poschodiePodorys1 :floor="1" ></poschodiePodorys1>
@@ -585,6 +615,15 @@ main{
   flex-flow: column;
   align-items: center;
   gap: 1em;
+}
+.timetablestart{
+  align-self: flex-end;
+//   gap: 1em;
+  margin-left: 1em;
+}
+.timetableend{
+  align-self: flex-end;
+  margin-right: 1em;
 }
 div#class_wrapper.simple-typeahead{
     width: 10em;

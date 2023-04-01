@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('school_classes', function (Blueprint $table) {
             $table->id();
             $table->string('class_name');
-            $table->string('api_id');
+            $table->string('school_class_id');
             $table->string('api_id_teacher');
             $table->timestamps();
         });

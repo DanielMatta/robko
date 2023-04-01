@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('school_cards', function (Blueprint $table) {
             $table->id();
-            $table->string("lesson_id");
-            $table->string("classroom_id");
+            $table->string("school_lesson_id");
+            $table->string("school_classroom_id");
             $table->tinyInteger("period");
             $table->string("weeks");
             $table->string("days");

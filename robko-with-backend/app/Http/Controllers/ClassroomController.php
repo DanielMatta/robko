@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Http;
 class ClassroomController extends Controller
 {
 
+    // public static function insert(){
+    //     SchoolClassroom::insert("classroom_name", "classroom_name")
+    // }
 
     public static function getClassroomShortName() {
         // return view('app',[
@@ -17,6 +20,7 @@ class ClassroomController extends Controller
         // ]);
         // dd(SchoolClassroom::pluck('short_name'));
         return SchoolClassroom::pluck("short_name");
+        // dd(SchoolClassroom::with('lessons')->find(1));
     }
     public static function getClassroomName() {
         // return view('app',[

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('classroom_name');
             $table->string('short_name');
-            $table->string('api_id');
+            $table->string('school_classroom_id');
             // $table->string('api_id_teacher');
             $table->timestamps();
         });

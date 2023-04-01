@@ -5,6 +5,9 @@ use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Storage;
 use App\Models\SchoolClassroom;
+use App\Http\Controllers\SchoolLessonController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +30,9 @@ Route::get('/', function () {
 // Route::get('/', [ClassroomController::class, 'getClassroomShortName']);
 // Route::get('/demo', [ClassroomController::class, 'getClassroomShortName']);
 Route::get('/get_floor/{id}', [ClassroomController::class, 'getFloor']);
+Route::get('/get_classroom_card/{id}', [LessonController::class, 'getcardforclassroom']);
+Route::get('/test/{id}', [SchoolLessonController::class, 'show']);
+// Route::get('/majko', [ClassroomController::class, 'getClassroomShortName']);
 // $url = Storage::url('../resources/maps/2poschodie.svg');
 // Route::get('/',[$url]);
 // Route::get('/mapa-1', [$url]);

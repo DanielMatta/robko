@@ -21,9 +21,9 @@ class GetLessonsFromApi{
         // $class_id = $classes->pluck("@attributes.id");
         // $class_id_teacher = $classes->pluck("@attributes.teacherid");
         return $classes->map(function($class) {
-            $formattedClass['api_id'] = $class->{"@attributes"}->id;
-            $formattedClass['class_id'] = $class->{"@attributes"}->classids;
-            $formattedClass['subject_id'] = $class->{"@attributes"}->subjectid;
+            $formattedClass['school_lesson_id'] = $class->{"@attributes"}->id;
+            $formattedClass['school_class_id'] = $class->{"@attributes"}->classids;
+            $formattedClass['school_subject_id'] = $class->{"@attributes"}->subjectid;
             return $formattedClass;
         });
     }
